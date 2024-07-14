@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+    <link rel="stylesheet" href="FrontEnd/UserLogin/UserLogin.css">
+</head>
+<body>
+    <div class="login-container" ng-controller="UserLoginController">
+        <h2>Login</h2>
+        <form ng-submit="login()">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" ng-model="user.email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" ng-model="user.password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p class="error" ng-show="error">{{error}}</p>
+        </form>
+        <p>New user? <a href="#!/register">Register here</a></p>
+    </div>
+</body>
+</html>

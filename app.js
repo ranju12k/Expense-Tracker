@@ -1,12 +1,23 @@
-var myApp=angular.module("Tracker",['ngRoute'])
+var myApp = angular.module("Tracker", ['ngRoute']);
 
-myApp.config(["$routeProvider",function($routeProvider){
+myApp.config(["$routeProvider", function($routeProvider) {
     $routeProvider
-    .when('/',{
-            templateUrl:''
-    })
-     .otherwise({
-                redirectTo: '/'
-    
-    });
+        .when('/', {
+            templateUrl: 'FrontEnd/UserLogin/UserLogin.html',
+            controller: 'UserLoginController'
+        })
+        .when('/login', {
+            templateUrl: 'FrontEnd/UserLogin/UserLogin.html',
+            controller: 'UserLoginController'
+        })
+        .when('/register', {
+            templateUrl: 'FrontEnd/UserRegistration/UserRegistration.html',
+            controller: 'UserRegistrationController'
+        })
+        .when('/welcomepage', {
+            templateUrl: 'FrontEnd/WelcomePage/WelcomePage.html'
+        })
+        .otherwise({
+            redirectTo: '/'
+        });
 }]);
