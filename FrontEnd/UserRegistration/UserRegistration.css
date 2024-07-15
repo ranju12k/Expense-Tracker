@@ -1,60 +1,87 @@
+/* Importing Bootstrap */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .registration-container {
-    width: 300px;
-    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
 }
 
-.registration-container h2 {
+h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #333;
 }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
+/* Form styles */
+label {
     margin-bottom: 5px;
+    color: #555;
 }
 
-.form-group input {
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
 }
 
 button {
-    width: 100%;
     padding: 10px;
     background-color: #28a745;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
+    font-size: 16px;
 }
 
 button:hover {
     background-color: #218838;
 }
 
-.error {
-    color: red;
+p {
     text-align: center;
-    margin-top: 10px;
+    color: #333;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Error and success messages */
+.error, .success {
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.error {
+    background-color: #dc3545;
 }
 
 .success {
-    color: green;
-    text-align: center;
-    margin-top: 10px;
+    background-color: #28a745;
 }

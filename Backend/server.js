@@ -56,17 +56,25 @@ MongoClient.connect(url, { useUnifiedTopology: true })
     });
 
     // Register route
-    app.post('/api/register', (req, res) => {
+   app.post('/api/register', async (req, res) => {
       const newUser = req.body;
-      userDataCollection.insertOne(newUser)
-        .then(result => {
-          console.log('User registered successfully');
-          res.json({ success: true });
-        })
-        .catch(err => {
-          console.error('Error registering user', err);
-          res.status(500).json({ error: 'Internal Server Error' });
-        });
+
+      try {
+        // Check for existing email
+        const existingUser = await userDataCollection.findOne({ email: newUser.email });
+
+        if (existingUser) {
+          return res.status(409).json({ error: 'Email address already registered. Please try a different email.' });
+        }
+
+        // Insert new user if email is unique
+        const result = await userDataCollection.insertOne(newUser);
+        console.log('User registered successfully');
+        res.json({ success: true });
+      } catch (err) {
+        console.error('Error registering user:', err);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
     });
 
     // Start the server

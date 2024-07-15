@@ -1,49 +1,80 @@
-.login-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Importing Bootstrap */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+
+/* General styles */
+body {
+    background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.login-container h2 {
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #333;
 }
 
-.login-container .form-group {
+/* Form styles */
+.form-group {
     margin-bottom: 15px;
 }
 
-.login-container .form-group label {
-    display: block;
+label {
     margin-bottom: 5px;
+    color: #555;
 }
 
-.login-container .form-group input {
-    width: 100%;
+input {
+    margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
 }
 
-.login-container button {
-    width: 100%;
+button {
     padding: 10px;
-    background-color: #5cb85c;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    color: white;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    width: 100%;
+    font-size: 16px;
 }
 
-.login-container button:hover {
-    background-color: #4cae4c;
+button:hover {
+    background-color: #0056b3;
 }
 
-.login-container .error {
-    color: red;
+p {
     text-align: center;
-    margin-top: 10px;
+    color: #333;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Error messages */
+.error {
+    color: #dc3545;
+    text-align: center;
 }
