@@ -4,23 +4,56 @@
     <meta charset="UTF-8">
     <title>User Login</title>
     <link rel="stylesheet" href="FrontEnd/UserLogin/UserLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <div class="login-container" ng-controller="UserLoginController">
-        <h2>Login</h2>
-        <form ng-submit="login()">
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" ng-model="user.email" required>
+    <div class="container" id="container" ng-controller="UserLoginController">
+        <div class="form-container sign-up-container">
+            <form ng-submit="register()">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social" ng-click="socialAlert()"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social" ng-click="socialAlert()"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social" ng-click="socialAlert()"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Name" ng-model="newUser.name" required />
+                <input type="email" placeholder="Email" ng-model="newUser.email" required />
+                <input type="password" placeholder="Password" ng-model="newUser.password" required />
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form ng-submit="login()">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social" ng-click="socialAlert()"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social" ng-click="socialAlert()"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social" ng-click="socialAlert()"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span>
+                <input type="email" placeholder="Email" ng-model="user.email" required />
+                <input type="password" placeholder="Password" ng-model="user.password" required />
+                <a href="#" ng-click="forgotPassword()">Forgot your password?</a>
+                <button type="submit">Sign In</button>
+                <p class="error" ng-show="error">{{error}}</p>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn" ng-click="navigateToLogin()">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp" ng-click="navigateToRegister()">Sign Up</button>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" ng-model="user.password" required>
-            </div>
-            <button type="submit">Login</button>
-            <p class="error" ng-show="error">{{error}}</p>
-        </form>
-        <p>New user? <a href="#!/register">Register here</a></p>
+        </div>
     </div>
+    <script src="FrontEnd/UserLogin/UserLoginController.js"></script>
 </body>
 </html>
