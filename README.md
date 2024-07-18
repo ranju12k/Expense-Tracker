@@ -13,7 +13,7 @@ A web application to help users track and manage their personal expenses. Built 
 
 ## Technologies Used
 
-- **Frontend**: AngularJS,HTML,CSS,JS
+- **Frontend**: AngularJS,HTML,CSS,JS,bootstrap
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 
