@@ -1,87 +1,98 @@
-/* Importing Bootstrap */
-@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
-
-/* General styles */
 body {
-    background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center fixed;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 130vh;
+    width:auto;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.registration-container {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 300px;
-}
+.sign-up {
+	font-family: 'Times New Roman', Times, serif;
+	margin: 0;
+    font-weight: bolder;
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
 }
-
-/* Form styles */
-label {
-    margin-bottom: 5px;
-    color: #555;
-}
-
-input {
-    margin-bottom: 15px;
-    padding: 10px;
+.container {
+    display: flex;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
     width: 100%;
+}
+
+.image-section {
+    flex: 0.9;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.form-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffcccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.form-section h1 {
+    margin-bottom: 20px;
+    
+   
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    font-weight: bolder;
+
+   
+}
+
+.form-block{
+    border-radius: 20px;
+    width: 360px;
+    height: fit-content;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
-    padding: 10px;
-    background-color: #28a745;
-    color: #fff;
+    background-color: #ff6666;
+    color: white;
+    padding: 10px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    width: 100%;
-    font-size: 16px;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #ff4d4d;
 }
 
 p {
-    text-align: center;
-    color: #333;
+    margin-top: 20px;
+    color: rgb(47, 0, 255);
 }
 
 p a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-p a:hover {
-    text-decoration: underline;
-}
-
-/* Error and success messages */
-.error, .success {
-    color: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.error {
-    background-color: #dc3545;
-}
-
-.success {
-    background-color: #28a745;
+    color: rgb(54, 10, 10);
 }
