@@ -54,7 +54,8 @@ A web application to help users track and manage their personal expenses. Built 
 
 ## Configuration
 
-- **MongoDB**: Ensure MongoDB is installed and running. Update the MongoDB connection string in `backend/config/db.js`. Create a database named EXPENSE TRACKER & add collection named UserData
+- **MongoDB**: Ensure MongoDB is installed and running. Update the MongoDB connection string in `backend/server.js`.
+- Create a database named EXPENSE TRACKER & add collection named UserData
 
 ## Usage
 
@@ -63,6 +64,11 @@ A web application to help users track and manage their personal expenses. Built 
 3. Edit or delete expenses as needed.
 4. View monthly reports and visualizations.
 5. Export your expense data to CSV or PDF.
+
+## Screen Shot
+1.Login Page - ![image](https://github.com/user-attachments/assets/d8c0986e-7e3a-4d35-8a93-238578d9d7e1)
+2.Sign-up Page- ![image](https://github.com/user-attachments/assets/d8ff17a2-def0-457d-80bb-45ec2859e7a6)
+
 
 ## Contributing
 
