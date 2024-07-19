@@ -15,7 +15,12 @@ myApp.config(["$routeProvider", function($routeProvider) {
             controller: 'UserRegistrationController'
         })
         .when('/welcomepage', {
-            templateUrl: 'FrontEnd/WelcomePage/WelcomePage.html'
+            templateUrl: 'FrontEnd/WelcomePage/WelcomePage.html',
+            controller: 'WelcomePageController'
+        })
+        .when('/home', {
+            templateUrl: 'FrontEnd/Home/Home.html',
+            controller: 'HomeController'
         })
         .otherwise({
             redirectTo: '/'
