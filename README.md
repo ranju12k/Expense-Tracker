@@ -68,6 +68,8 @@ A web application to help users track and manage their personal expenses. Built 
 ## Screen Shot
 1.Login Page - ![image](https://github.com/user-attachments/assets/d8c0986e-7e3a-4d35-8a93-238578d9d7e1)
 2.Sign-up Page- ![image](https://github.com/user-attachments/assets/d8ff17a2-def0-457d-80bb-45ec2859e7a6)
+3.NavBAR- ![image](https://github.com/user-attachments/assets/722fa3b5-cd1b-4c68-bc16-07aa5a5c9c9c)
+
 
 
 ## Contributing
