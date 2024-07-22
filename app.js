@@ -22,6 +22,10 @@ myApp.config(["$routeProvider", function($routeProvider) {
             templateUrl: 'FrontEnd/Home/Home.html',
             controller: 'HomeController'
         })
+        .when('/navbar', {
+            templateUrl: 'FrontEnd/NavigationBar/NavigationBar.html',
+            controller: 'NavigationBarController'
+        })
         .otherwise({
             redirectTo: '/'
         });

@@ -26,6 +26,8 @@ MongoClient.connect(url, { useUnifiedTopology: true })
 
     // Define MongoDB collections
     const userDataCollection = db.collection('UserData');
+    const expenseDataCollection = db.collection('Expenses');
+    const categoryDataCollection = db.collection('Categories');
 
     // Route to fetch user data
     app.get('/api/UserData', (req, res) => {
@@ -76,6 +78,67 @@ MongoClient.connect(url, { useUnifiedTopology: true })
         res.status(500).json({ error: 'Internal Server Error' });
       }
     });
+
+
+       // Route to add expense
+       app.post('/api/expenses', async (req, res) => {
+        try {
+          const newExpense = req.body;
+          const result = await expenseDataCollection.insertOne(newExpense);
+          res.json({ success: true, expenseId: result.insertedId });
+        } catch (err) {
+          console.error('Error adding expense:', err);
+          res.status(500).json({ error: 'Internal Server Error' });
+        }
+      });
+  
+      // Route to fetch expenses
+      app.get('/api/expenses', async (req, res) => {
+        try {
+          const expenses = await expenseDataCollection.find().toArray();
+          res.json(expenses);
+        } catch (err) {
+          console.error('Error fetching expenses:', err);
+          res.status(500).json({ error: 'Internal Server Error' });
+        }
+      });
+  
+      // Route to delete expense
+      app.delete('/api/expenses/:id', async (req, res) => {
+        try {
+          const expenseId = new ObjectId(req.params.id);
+          await expenseDataCollection.deleteOne({ _id: expenseId });
+          res.json({ success: true });
+        } catch (err) {
+          console.error('Error deleting expense:', err);
+          res.status(500).json({ error: 'Internal Server Error' });
+        }
+      });
+  
+      // Route to fetch categories
+      app.get('/api/categories', async (req, res) => {
+        try {
+          const categories = await categoryDataCollection.find().toArray();
+          res.json(categories);
+        } catch (err) {
+          console.error('Error fetching categories:', err);
+          res.status(500).json({ error: 'Internal Server Error' });
+        }
+      });
+  
+      // Route to add category
+      app.post('/api/categories', async (req, res) => {
+        try {
+          const newCategory = req.body;
+          const result = await categoryDataCollection.insertOne(newCategory);
+          res.json({ success: true, categoryId: result.insertedId });
+        } catch (err) {
+          console.error('Error adding category:', err);
+          res.status(500).json({ error: 'Internal Server Error' });
+        }
+      });
+
+      
 
     // Start the server
     app.listen(port, () => {
