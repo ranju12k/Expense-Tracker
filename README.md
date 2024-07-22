@@ -1,6 +1,6 @@
 # Expense-Tracker [Currently Working On this Project]
 
-A web application to help users track and manage their personal expenses. Built using AngularJS for the frontend, Node.js and Express.js for the backend, and MongoDB for the database.
+A web application designed to help users track and manage their personal expenses. Built using AngularJS for the frontend, Node.js and Express.js for the backend, and MongoDB for the database.
 
 ## Features
 
@@ -13,7 +13,7 @@ A web application to help users track and manage their personal expenses. Built 
 
 ## Technologies Used
 
-- **Frontend**: AngularJS,HTML,CSS,JS,bootstrap
+- **Frontend**: AngularJS, HTML, CSS, JavaScript, Bootstrap
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 
@@ -35,14 +35,13 @@ A web application to help users track and manage their personal expenses. Built 
     ```bash
     cd ../frontend
     npm install
-    npm install -g http-server.
+    npm install -g http-server
     ```
 
 4. Start the backend server:
     ```bash
     cd ../backend
     npm start
-    node server
     ```
 
 5. Start the frontend server:
@@ -55,7 +54,7 @@ A web application to help users track and manage their personal expenses. Built 
 ## Configuration
 
 - **MongoDB**: Ensure MongoDB is installed and running. Update the MongoDB connection string in `backend/server.js`.
-- Create a database named EXPENSE TRACKER & add collection named UserData
+- Create a database named `EXPENSE_TRACKER` and add a collection named `UserData`.
 
 ## Usage
 
@@ -64,6 +63,7 @@ A web application to help users track and manage their personal expenses. Built 
 3. Edit or delete expenses as needed.
 4. View monthly reports and visualizations.
 5. Export your expense data to CSV or PDF.
+
 
 ## Screen Shot
 1.Login Page - ![image](https://github.com/user-attachments/assets/d8c0986e-7e3a-4d35-8a93-238578d9d7e1)
