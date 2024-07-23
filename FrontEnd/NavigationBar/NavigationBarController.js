@@ -2,6 +2,12 @@ myApp.controller('NavigationBarController', ['$scope', '$location', function ($s
 
     $scope.searchQuery = ''; // Initialize searchQuery variable
     $scope.searchResults = []; // Array to store search results
+ 
+
+    $scope.isLoginRegisterOrWelcomePage = function() {
+        return ['/login', '/register', '/welcomepage', '/'].includes($location.path());
+    };
+
 
     // Example data for search
     const allItems = [

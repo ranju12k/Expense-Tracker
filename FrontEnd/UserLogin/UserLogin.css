@@ -32,6 +32,15 @@ p {
 	letter-spacing: 0.5px;
 	margin: 20px 0 30px;
 }
+.small{
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+	color: aqua	;
+	
+}
 
 span {
 	font-size: 12px;

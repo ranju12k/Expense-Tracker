@@ -1,5 +1,5 @@
 var myApp = angular.module("Tracker", ['ngRoute']);
-
+ 
 myApp.config(["$routeProvider", function($routeProvider) {
     $routeProvider
         .when('/', {
@@ -22,11 +22,14 @@ myApp.config(["$routeProvider", function($routeProvider) {
             templateUrl: 'FrontEnd/Home/Home.html',
             controller: 'HomeController'
         })
-        .when('/navbar', {
-            templateUrl: 'FrontEnd/NavigationBar/NavigationBar.html',
-            controller: 'NavigationBarController'
-        })
         .otherwise({
             redirectTo: '/'
         });
 }]);
+ 
+myApp.run(["$rootScope", "$location", function($rootScope, $location) {
+    // $rootScope.isLoginRegisterOrWelcomePage = function() {
+    //     return ['/login', '/register', '/welcomepage', '/'].includes($location.path());
+    // };
+}]);
+ 
