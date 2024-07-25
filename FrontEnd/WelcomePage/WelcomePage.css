@@ -1,29 +1,20 @@
 .welcome-body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url('image.jpg') no-repeat center center fixed; /* Adjust image path */
-  background-size: cover;
+  background-color: black; /* Set your desired background color */
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures full viewport height */
+  min-height: 100vh;
 }
 
-.welcome-body .content {
-  flex: 1; /* Fills remaining space */
+.welcome-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  height: 100%;
 }
 
-.welcome-body .welcome-container {
-  background: none;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add some depth */
-}
-
-.welcome-body .get-started-button {
+.get-started-button {
   font-size: 1.5em;
   padding: 15px 30px;
   background-color: #007bff;
@@ -34,20 +25,76 @@
   transition: background-color 0.3s ease;
 }
 
-.welcome-body .get-started-button:hover {
+.get-started-button:hover {
   background-color: #0056b3;
 }
 
-.welcome-body .get-started-button:focus {
-  box-shadow: 0 0 5px #007bff; /* Add focus effect */
+.get-started-button:focus {
+  box-shadow: 0 0 5px #007bff;
 }
 
-/* Add media queries for responsive design */
 @media (max-width: 768px) {
-  .welcome-body .welcome-container {
-      padding: 10px;
+  .welcome-container {
+    padding: 10px;
   }
-  .welcome-body .get-started-button {
-      padding: 10px 20px;
+  .get-started-button {
+    padding: 10px 20px;
+  }
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it is above other elements */
+}
+
+#loader {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #9370DB;
+  animation: spin 2s linear infinite;
+}
+
+#loader:before,
+#loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+
+#loader:before {
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-top-color: #BA55D3;
+  animation: spin 3s linear infinite;
+}
+
+#loader:after {
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-top-color: #FF00FF;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
