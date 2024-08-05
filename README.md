@@ -9,7 +9,7 @@ A web application designed to help users track and manage their personal expense
 - **Categorization**: Categorize expenses (e.g., food, transportation, entertainment).
 - **Monthly Reports**: Generate detailed monthly expense reports.
 - **Data Visualization**: Visualize expense data using charts.
-- **Export Data**: Export expense data to PDF.
+- **Export Data**: Export expense data to PDF or CVC.
 
 ## Technologies Used
 
