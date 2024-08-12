@@ -1,6 +1,6 @@
 # Expense-Tracker [Currently Working On this Project]
 
-A web application designed to help users track and manage their personal expenses. Built using AngularJS for the frontend, Node.js and Express.js for the backend, and MongoDB for the database.
+A web application designed to help users track and manage their personal expenses. Built using AngularJS[htmls,js,css,Bootstrap] for the frontend, Node.js and Express.js for the backend, and MongoDB for the database.
 
 ## Features
 
